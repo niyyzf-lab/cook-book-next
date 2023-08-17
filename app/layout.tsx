@@ -19,13 +19,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="overflow-hidden bg-white dark:bg-black">
         <Theme>
           <div className="flex flex-col h-screen">
             <div className="flex flex-col">
               <DarkThemeSwitch />
             </div>
-            <div className="flex-grow flex w-full">{children}</div>
+            <div className="flex-grow flex max-w-full overflow-y-auto">
+              {children}
+            </div>
             <div>
               <Navigator />
             </div>
