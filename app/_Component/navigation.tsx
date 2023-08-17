@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 
 function Navigation() {
   return (
-    <div className="sm:px-20 px-9 w-screen flex justify-between overflow-hidden">
+    <div className="sm:px-20 px-9 w-screen flex justify-between">
       <Link href="/">
         <div className="flex flex-col items-center">
           <Icon icon="ri:home-line" className=" text-3xl md:text-3xl" />

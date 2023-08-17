@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navigator from "./_Component/navigation";
 import { Theme } from "@radix-ui/themes";
-import DarkThemeSwitch from "./_Component/darkthemeswitch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,19 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="overflow-hidden bg-white h-screen dark:bg-black">
-        <Theme>
-          <div className="flex flex-col h-screen">
-            <div className="flex flex-col">
-              <DarkThemeSwitch />
-            </div>
-            <div className="flex-grow flex max-w-full overflow-y-auto">
-              {children}
-            </div>
-            <div>
-              <Navigator />
-            </div>
+      <body className="overflow-hidden h-screen dark:bg-black">
+        <Theme className="h-full flex flex-col">
+          <div className="flex-grow flex max-w-full overflow-y-auto">
+            {children}
           </div>
+          <Navigator />
         </Theme>
       </body>
     </html>
