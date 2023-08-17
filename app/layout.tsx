@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="overflow-hidden bg-white dark:bg-black">
+      <body className="overflow-hidden bg-white h-screen dark:bg-black">
         <Theme>
           <div className="flex flex-col h-screen">
             <div className="flex flex-col">
