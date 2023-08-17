@@ -20,12 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="overflow-hidden h-screen dark:bg-black">
         <Theme className="h-full flex flex-col">
-          <div
-            className="flex-grow overflow-auto"
-            style={{ height: "calc(100vh - [height_of_bottom_navbar]px)" }}
-          >
-            {children}
-          </div>
+          <div className="flex-grow overflow-auto">{children}</div>
           <Navigator />
         </Theme>
       </body>
