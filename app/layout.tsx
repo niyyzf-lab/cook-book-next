@@ -1,3 +1,4 @@
+"use client";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -18,9 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="overflow-hidden h-screen dark:bg-black ">
+      <body className="overflow-hidden h-screen dark:bg-black">
         <Theme className="h-full flex flex-col">
-          <div className="sm:flex-grow h-[calc(100vh-50px)] overflow-y-auto">
+          <div
+            className="flex-grow overflow-auto"
+            style={{ height: "calc(100vh - [height_of_bottom_navbar]px)" }}
+          >
             {children}
           </div>
           <Navigator />
