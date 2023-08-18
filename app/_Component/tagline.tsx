@@ -11,7 +11,7 @@ function Tagline(props: { Data: string[]; color: Color }) {
       value={groupSelected}
       onChange={setGroupSelected as any}
       classNames={{
-        base: "w-full",
+        base: "w-full px-2",
         wrapper: " justify-center ",
       }}
     >
