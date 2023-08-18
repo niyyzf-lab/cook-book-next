@@ -31,7 +31,7 @@ export default function Home() {
             "🦴骨头",
             "🐟鱼(Todo)",
           ]}
-          color="red-tag"
+          color="red"
         />
       </div>
       <div className="flex flex-col items-center">
@@ -40,7 +40,7 @@ export default function Home() {
         </h2>
         <Tagline
           Data={["🍝面食", "🍞面包", "🍚米", "🍜方便面"]}
-          color="yellow-tag"
+          color="yellow"
         ></Tagline>
       </div>
       <div className="flex flex-col items-center">
@@ -53,7 +53,7 @@ export default function Home() {
             "电饭煲",
             "一口能炒又能煮的大锅",
           ]}
-          color="stone-tag"
+          color="stone"
         ></Tagline>
       </div>
       <div className="flex flex-col items-center">
@@ -62,7 +62,7 @@ export default function Home() {
         </h2>
         <Tagline
           Data={["模糊匹配", "严格匹配", "生存模式"]}
-          color="orange-tag"
+          color="orange"
         ></Tagline>
       </div>
       <p>你要先选食材或工具哦～</p>
@@ -91,7 +91,7 @@ function Vegetables() {
           "🥗包菜",
           "🥬白菜",
         ]}
-        color="green-tag"
+        color="green"
       />
     </div>
   );

@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navigator from "./_Component/navigation";
-import { Theme } from "@radix-ui/themes";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="overflow-hidden  dark:bg-black">
-        <Theme className="h-full w-full">
+        <Providers>
           <div className="absolute overflow-y-auto w-full h-[calc(100%-50px)]">
             {children}
           </div>
           <Navigator />
-        </Theme>
+        </Providers>
       </body>
     </html>
   );

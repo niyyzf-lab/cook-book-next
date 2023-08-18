@@ -9,23 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@radix-ui/react-popover": "1.0.6",
-    "@radix-ui/react-toggle": "^1.0.3",
-    "@radix-ui/themes": "^1.0.0",
+    "@nextui-org/react": "^2.0.22",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.16",
+    "framer-motion": "^10.16.0",
     "next": "13.4.16",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "tailwind-variants": "^0.1.13",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@iconify/react": "^4.1.1"
+    "@iconify/react": "^4.1.1",
+    "classnames": "^2.3.2"
   }
 }
