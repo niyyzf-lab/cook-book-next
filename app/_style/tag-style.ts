@@ -2,8 +2,14 @@ import { tv } from "@nextui-org/react";
 
 export const CheckboxStyle = tv({
   slots: {
-    base: "rounded border shadow-md hover:shadow-lg transition-all duration-700",
-    content: "",
+    base: [
+      "rounded border",
+      " shadow-md hover:shadow-lg ",
+      "transition-all duration-700",
+      "md:px-1 md:pl-2 space-x-1 pl-2",
+      "justify-center items-center",
+    ],
+    content: " md:text-xl font-bold  ",
   },
 
   variants: {
