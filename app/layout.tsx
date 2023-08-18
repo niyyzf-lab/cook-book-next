@@ -18,9 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="overflow-hidden h-screen dark:bg-black">
-        <Theme className="h-full flex flex-col">
-          <div className="flex-grow overflow-auto">{children}</div>
+      <body className="overflow-hidden  dark:bg-black">
+        <Theme className="h-full w-full">
+          <div className="absolute overflow-y-auto w-full h-[calc(100%-50px)]">
+            {children}
+          </div>
           <Navigator />
         </Theme>
       </body>
