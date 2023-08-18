@@ -120,18 +120,16 @@ const checkbox = tv({
   ],
 });
 
-export default function TagChickBox(props: {
-  children?: React.ReactNode;
-  color: Color;
-}) {
+export default function TagChickBox(props: any) {
   const {
+    children,
     isSelected,
     isFocusVisible,
     getBaseProps,
     getLabelProps,
     getInputProps,
   } = useCheckbox({
-    defaultSelected: false,
+    ...props,
   });
   const styles = checkbox({ isSelected, color: props.color });
   return (
