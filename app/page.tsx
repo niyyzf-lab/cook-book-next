@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Tagline from "./_Component/tagline";
+import Tagline from "./_Component/tag-line";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function Home() {

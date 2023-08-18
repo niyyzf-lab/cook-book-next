@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="overflow-hidden  dark:bg-black">
+      <body className="overflow-hidden dark:bg-black">
         <Providers>
           <div className="absolute overflow-y-auto w-full h-[calc(100%-50px)]">
             {children}
