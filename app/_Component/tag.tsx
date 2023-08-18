@@ -24,9 +24,11 @@ export default function TagChickBox(props: any) {
           content: styles.content(),
         }}
         startContent={
-          isSelected ? (
-            <Icon icon="fluent:food-24-filled" color={props.color} />
-          ) : null
+          !isSelected ? (
+            <Icon icon={props.icon} color={props.color} />
+          ) : (
+            <Icon icon="twemoji:fork-and-knife-with-plate" />
+          )
         }
         variant="faded"
         {...getLabelProps()}
