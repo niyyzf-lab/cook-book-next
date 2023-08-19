@@ -13,33 +13,6 @@ import { Ingredient, getIngredientByName } from "./_help/help";
 import { recipes } from "./../data/recipe";
 import { RecipeItem, db, searchRecipesByIngredients } from "./_help/db";
 
-/**
- * 数据库初始化
- */
-const dBInit = () => {
-  //查询localStorage中是否有数据Init
-  if (localStorage.getItem("dBInit") === null) {
-    const Data = recipes;
-    recipes.forEach((recipe) => {
-      //获取菜谱的食材列表
-      const ingredients = recipe.stuff;
-      //创建一个空列表
-      let ingredientList = ingredients.map((ingredient) => {
-        return getIngredientByName(ingredient)?.icon;
-      });
-      //判断长度，如果大于5，就只保留一个大锅炖图标
-      if (ingredientList.length > 5) {
-        ingredientList = ["twemoji:shallow-pan-of-food"];
-      }
-      //像recipe中添加一个新的属性
-      recipe.emojis = ingredientList as string[];
-      db.Recipes.add(recipe);
-      //添加初始化完成标记
-      localStorage.setItem("dBInit", "true");
-    });
-  }
-};
-
 export default function Home() {
   //创建多个列表，用于存储用户选择的食材
   const [vegetables, setVegetables] = React.useState<Ingredient[]>([]);
@@ -48,7 +21,35 @@ export default function Home() {
   const [tools, setTools] = React.useState<Ingredient[]>([]);
   const [mode, setMode] = React.useState<Ingredient[]>([{ name: "模糊匹配" }]);
   const [result, setResult] = React.useState<RecipeItem[]>([]);
-  dBInit();
+  /**
+   * 数据库初始化
+   */
+  const dBInit = () => {
+    if (localStorage.getItem("dBInit") === null) {
+      const Data = recipes;
+      recipes.forEach((recipe) => {
+        //获取菜谱的食材列表
+        const ingredients = recipe.stuff;
+        //创建一个空列表
+        let ingredientList = ingredients.map((ingredient) => {
+          return getIngredientByName(ingredient)?.icon;
+        });
+        //判断长度，如果大于5，就只保留一个大锅炖图标
+        if (ingredientList.length > 5) {
+          ingredientList = ["twemoji:shallow-pan-of-food"];
+        }
+        //像recipe中添加一个新的属性
+        recipe.emojis = ingredientList as string[];
+        db.Recipes.add(recipe);
+        //添加初始化完成标记
+        localStorage.setItem("dBInit", "true");
+      });
+    }
+  };
+  const ISSERVER = typeof window === "undefined";
+  if (!ISSERVER) {
+    dBInit();
+  }
   //方法输出所有列表
   React.useEffect(() => {
     //合并三个列表
