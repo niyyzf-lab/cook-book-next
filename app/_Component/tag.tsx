@@ -1,9 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { useCheckbox, Chip, VisuallyHidden } from "@nextui-org/react";
-import { Color } from "../_help/help";
-import ClassName from "classnames";
-import { Content } from "next/font/google";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { CheckboxStyle } from "../_style/tag-style";
 
