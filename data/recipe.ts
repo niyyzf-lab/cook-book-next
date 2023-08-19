@@ -1,14 +1,6 @@
-export interface Recipe {
-  name: string;
-  stuff: string[];
-  bv: string;
-  difficulty?: string;
-  tags?: string[];
-  methods?: string[];
-  tools: string[];
-}
+import { RecipeItem } from "@/app/_help/db";
 
-export const recipes: Recipe[] = [
+export const recipes: RecipeItem[] = [
   {
     name: "电饭煲版广式腊肠煲饭",
     stuff: ["腊肠", "米"],
@@ -274,7 +266,7 @@ export const recipes: Recipe[] = [
     name: "电饭煲版茄子猪肉焖面",
     stuff: ["茄子", "猪肉", "面食"],
     bv: "BV1ib41137ig",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: [],
     tools: ["电饭煲"],
@@ -454,7 +446,7 @@ export const recipes: Recipe[] = [
     name: "爆浆鸡腿",
     stuff: ["鸡肉"],
     bv: "BV1ju411X7mx",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: ["烤"],
     tools: ["烤箱"],
@@ -472,7 +464,7 @@ export const recipes: Recipe[] = [
     name: "BBQ烟熏手撕猪肉",
     stuff: ["猪肉"],
     bv: "BV1DV411x7SH",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: ["烤"],
     tools: ["烤箱"],
@@ -535,7 +527,7 @@ export const recipes: Recipe[] = [
     name: "烤箱版爆浆鸡腿",
     stuff: ["鸡肉"],
     bv: "BV1ju411X7mx",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: [],
     tools: ["烤箱"],
@@ -706,7 +698,7 @@ export const recipes: Recipe[] = [
     name: "烤箱牛肉",
     stuff: ["牛肉"],
     bv: "BV1L64y1r7bk",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: ["烤"],
     tools: ["烤箱"],
@@ -2099,7 +2091,7 @@ export const recipes: Recipe[] = [
     bv: "BV1Tb4y1X7ow",
     difficulty: "简单",
     tags: ["脆口"],
-    methods: ["凉拌"],
+    methods: ["拌"],
     tools: ["一口大锅"],
   },
   {
@@ -2643,7 +2635,7 @@ export const recipes: Recipe[] = [
     tools: ["一口大锅"],
   },
   {
-    name: "凉拌包菜",
+    name: "拌包菜",
     stuff: ["包菜"],
     bv: "BV1HY411n7dV",
     difficulty: "简单",
@@ -2652,7 +2644,7 @@ export const recipes: Recipe[] = [
     tools: ["一口大锅"],
   },
   {
-    name: "凉拌芹菜叶",
+    name: "拌芹菜叶",
     stuff: ["芹菜"],
     bv: "av976520411",
     difficulty: "简单",
@@ -2661,21 +2653,21 @@ export const recipes: Recipe[] = [
     tools: ["一口大锅"],
   },
   {
-    name: "凉拌莴笋丝",
+    name: "拌莴笋丝",
     stuff: ["莴笋"],
     bv: "BV1Es411j7oy",
     difficulty: "简单",
     tags: ["凉菜"],
-    methods: ["凉拌"],
+    methods: ["拌"],
     tools: ["一口大锅"],
   },
   {
-    name: "凉拌西葫芦",
+    name: "拌西葫芦",
     stuff: ["西葫芦"],
     bv: "BV175411U7LU",
     difficulty: "简单",
     tags: ["凉菜"],
-    methods: ["凉拌"],
+    methods: ["拌"],
     tools: ["一口大锅"],
   },
   {
@@ -2684,7 +2676,7 @@ export const recipes: Recipe[] = [
     bv: "BV1Th411U7nW",
     difficulty: "简单",
     tags: ["凉菜"],
-    methods: ["凉拌"],
+    methods: ["拌"],
     tools: ["一口大锅"],
   },
   {
@@ -2711,7 +2703,7 @@ export const recipes: Recipe[] = [
     bv: "BV1144y1n7ZV",
     difficulty: "简单",
     tags: ["凉菜"],
-    methods: ["凉拌"],
+    methods: ["拌"],
     tools: ["一口大锅"],
   },
   {
@@ -2729,7 +2721,7 @@ export const recipes: Recipe[] = [
     bv: "BV16T4y1i78D",
     difficulty: "困难",
     tags: ["零食"],
-    methods: ["炸/煎"],
+    methods: ["炸", "煎"],
     tools: ["一口大锅"],
   },
   {
@@ -3030,7 +3022,7 @@ export const recipes: Recipe[] = [
     tools: ["一口大锅"],
   },
   {
-    name: "麻辣凉拌包菜",
+    name: "麻辣拌包菜",
     stuff: ["包菜"],
     bv: "BV18f4y1e7cy",
     difficulty: "简单",
@@ -4020,7 +4012,7 @@ export const recipes: Recipe[] = [
     name: "翡翠玉带虾仁",
     stuff: ["黄瓜", "虾", "鸡蛋"],
     bv: "BV1E4411w7wC",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: [],
     tools: ["一口大锅"],
@@ -4449,7 +4441,7 @@ export const recipes: Recipe[] = [
     tools: ["一口大锅"],
   },
   {
-    name: "辣味牛肉凉拌小黄瓜",
+    name: "辣味牛肉拌小黄瓜",
     stuff: ["黄瓜", "牛肉", "洋葱"],
     bv: "BV1qr4y1Y792",
     difficulty: "简单",
@@ -4485,16 +4477,16 @@ export const recipes: Recipe[] = [
     tools: ["一口大锅"],
   },
   {
-    name: "凉拌黄瓜虾滑",
+    name: "拌黄瓜虾滑",
     stuff: ["黄瓜", "虾"],
     bv: "BV1RF411W7v7",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: [],
     tools: ["一口大锅"],
   },
   {
-    name: "凉拌莴苣",
+    name: "拌莴苣",
     stuff: ["莴笋"],
     bv: "BV1z3411Y7Bs",
     difficulty: "",
@@ -4503,7 +4495,7 @@ export const recipes: Recipe[] = [
     tools: ["一口大锅"],
   },
   {
-    name: "凉拌胸丝",
+    name: "拌胸丝",
     stuff: ["鸡肉"],
     bv: "BV1h54y1Q7pf",
     difficulty: "",
@@ -4512,7 +4504,7 @@ export const recipes: Recipe[] = [
     tools: ["一口大锅"],
   },
   {
-    name: "凉拌洋葱",
+    name: "拌洋葱",
     stuff: ["洋葱"],
     bv: "BV1BS4y1G7XD",
     difficulty: "",
@@ -4652,7 +4644,7 @@ export const recipes: Recipe[] = [
     bv: "BV1RV41167WV",
     difficulty: "简单",
     tags: [],
-    methods: ["凉拌"],
+    methods: ["拌"],
     tools: ["一口大锅"],
   },
   {
@@ -4902,7 +4894,7 @@ export const recipes: Recipe[] = [
     name: "水煮牛肉",
     stuff: ["牛肉", "菌菇", "莴笋", "豆腐"],
     bv: "BV11q4y1z7dD",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: [],
     tools: ["一口大锅"],
@@ -5523,7 +5515,7 @@ export const recipes: Recipe[] = [
     name: "自制牛肉干",
     stuff: ["牛肉"],
     bv: "BV1Ht411d71Q",
-    difficulty: "复杂",
+    difficulty: "困难",
     tags: [],
     methods: [],
     tools: ["一口大锅"],

@@ -136,7 +136,7 @@ export const toolsList: Ingredient[] = [
     icon: "gg:smart-home-cooker",
   },
   {
-    name: "一口能炒又能煮的大锅",
+    name: "一口大锅",
     icon: "mdi:pot-steam-outline",
   },
 ];
