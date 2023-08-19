@@ -5,6 +5,7 @@ import {
   stapleFoodList,
   toolsList,
 } from "./IngredientList";
+import { Video } from "./post";
 /**定义颜色接口 */
 export type Color = "green" | "red" | "yellow" | "stone" | "orange";
 
@@ -28,3 +29,10 @@ export const getIngredientByName = (name: string): Ingredient | undefined => {
   ];
   return list.find((item) => item.name === name);
 };
+export function matchBvid(bv: string, videos:Video[]) {
+  const matchedVideo = videos.find((video) => video.data.bvid === bv);
+  if (matchedVideo) {
+    return matchedVideo.data.pic;
+  }
+  return ""; // 如果没有匹配到，默认返回空字符串
+}

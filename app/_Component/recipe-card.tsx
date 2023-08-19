@@ -2,9 +2,10 @@ import React from "react";
 import { Difficulty, RecipeItem } from "../_help/db";
 import { Card, CardBody, CardFooter, Image, Tooltip } from "@nextui-org/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { getIngredientByName } from "../_help/help";
+import { getIngredientByName, matchBvid } from "../_help/help";
+import { Video } from "./../_help/post";
 
-function Recipe_card(props: { recipe: RecipeItem[] }) {
+function Recipe_card(props: { recipe: RecipeItem[]; VideoData: Video[] }) {
   const renderIcons = (difficulty: Difficulty | undefined | "") => {
     if (difficulty === "简单") {
       return (
@@ -48,7 +49,7 @@ function Recipe_card(props: { recipe: RecipeItem[] }) {
                   width="100%"
                   alt={item.name}
                   className="w-full object-cover h-[140px]"
-                  src={item.bv}
+                  src={matchBvid(item.bv as string, props.VideoData)}
                 />
                 <b className="absolute top-0 right-0  p-1 rounded-tl-lg  opacity-80 flex">
                   {renderIcons(item.difficulty)}
